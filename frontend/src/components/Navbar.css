@@ -1,0 +1,200 @@
+/* ========================================
+   NAVBAR
+   ======================================== */
+
+.navbar {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0 32px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+/* ========================================
+   BRAND
+   ======================================== */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.brand-sub {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ========================================
+   ACTIONS
+   ======================================== */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f1f5f9;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.status-text {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+/* ========================================
+   USER PROFILE
+   ======================================== */
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 4px 12px 4px 4px;
+  border-radius: 30px;
+  transition: all 0.2s ease;
+}
+
+.user-profile:hover {
+  background: #f1f5f9;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.user-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.user-role {
+  font-size: 0.65rem;
+  color: #94a3b8;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar-container {
+    height: 64px;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .brand-sub {
+    font-size: 0.55rem;
+  }
+
+  .user-info {
+    display: none;
+  }
+
+  .status-text {
+    font-size: 0.7rem;
+  }
+
+  .navbar-actions {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .status-indicator {
+    padding: 4px 10px;
+  }
+
+  .status-text {
+    display: none;
+  }
+}
